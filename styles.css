@@ -1,24 +1,4 @@
-/* ============================================
-   VELVET WEAR CLOTHING STORE - MAIN STYLESHEET
-   ============================================
-   
-   This file contains all the styling for the website.
-   It controls colors, layouts, fonts, and responsiveness.
-   
-   Sections:
-   1. Basic Reset & Body Styling
-   2. Header & Navigation
-   3. Product Display
-   4. Shopping Cart
-   5. Admin Panel
-   6. Footer
-   7. Responsive Design (Mobile)
-   ============================================ */
-
-
-/* ==========================================
-   1. BASIC RESET & BODY STYLING
-   ========================================== */
+/*   1. BASIC RESET & BODY STYLING */
 
 /* Reset default browser styles */
 body {
@@ -29,9 +9,7 @@ body {
 }
 
 
-/* ==========================================
-   2. HEADER & NAVIGATION
-   ========================================== */
+/* 2. HEADER & NAVIGATION */
 
 /* Main header bar at the top */
 header {
@@ -123,9 +101,7 @@ nav {
 }
 
 
-/* ==========================================
-   3. PRODUCT DISPLAY SECTION
-   ========================================== */
+/* 3. PRODUCT DISPLAY SECTION */
 
 /* Main content area */
 main {
@@ -202,9 +178,7 @@ main {
 }
 
 
-/* ==========================================
-   4. SHOPPING CART STYLING
-   ========================================== */
+/* 4. SHOPPING CART STYLING */
 
 /* Cart container (popup) */
 .cart-container,
@@ -236,9 +210,7 @@ main {
 }
 
 
-/* ==========================================
-   5. ADMIN PANEL STYLING
-   ========================================== */
+/* 5. ADMIN PANEL STYLING */
 
 /* Admin panel container */
 .admin-panel {
@@ -286,9 +258,7 @@ main {
 }
 
 
-/* ==========================================
-   6. ADDITIONAL BUTTONS
-   ========================================== */
+/* 6. ADDITIONAL BUTTONS */
 
 /* Logout button styling */
 .logout-button {
@@ -329,9 +299,7 @@ main {
 }
 
 
-/* ==========================================
-   7. FOOTER
-   ========================================== */
+/* 7. FOOTER */
 
 /* Footer at bottom of page */
 footer {
@@ -344,9 +312,7 @@ footer {
 }
 
 
-/* ==========================================
-   8. RESPONSIVE DESIGN (MOBILE)
-   ========================================== */
+/* 8. RESPONSIVE DESIGN (MOBILE) */
 
 /* Apply these styles only on screens smaller than 768px */
 @media (max-width: 768px) {
