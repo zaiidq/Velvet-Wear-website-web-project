@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Store Policy - Velvet Wear</title>
+  
+  <style>
+    /* ========================================
+       HEADER & NAVIGATION
+       ======================================== */
+    
+    header {
+      background-color: transparent;
+      padding: 10px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+      color: white;
+    }
+
+    .logo img {
+      height: 70px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00aaff;
+    }
+
+    /* ========================================
+       BASIC RESET
+       ======================================== */
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    /* ========================================
+       PAGE LAYOUT
+       ======================================== */
+    
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      padding: 80px 20px 20px; /* Top padding for fixed header */
+      color: white;
+      position: relative; 
+      overflow-y: auto; /* Allow vertical scrolling */
+    }
+
+    /* Fixed background image */
+    body::before {
+      content: "";
+      position: fixed; /* Fixed position so it doesn't scroll */
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url("Back.png") center center / cover no-repeat;
+      z-index: -1;
+    }
+    
+    /* ========================================
+       CONTENT CONTAINER
+       ======================================== */
+    
+    .content-box {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px); /* Blur effect */
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    /* ========================================
+       HEADINGS & TEXT
+       ======================================== */
+    
+    /* Main page heading */
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Section headings */
+    h2 {
+      font-size: 1.2rem;
+      color: #00aaff; /* Light blue for emphasis */
+      margin-top: 20px;
+    }
+
+    /* Paragraphs and list items */
+    p, li {
+      font-size: 16px;
+      line-height: 1.6; /* Spacing between lines for readability */
+      margin: 5px 0;
+    }
+
+    /* Lists */
+    ul {
+      margin-left: 20px; /* Indent lists */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <header>
+    <nav>
+      <!-- Store logo -->
+      <div class="logo">
+        <img src="vw_logo.png" alt="Velvet Wear Logo" />
+      </div>
+      
+      <!-- Navigation menu -->
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========================================
+       STORE POLICIES CONTENT
+       ======================================== -->
+  <div class="content-box">
+    <h1>🛍️ Store Policies</h1>
+
+    <!-- Policy 1: Returns & Exchanges -->
+    <h2>1. Return & Exchange Policy</h2>
+    <ul>
+      <li>Returns accepted within 14 days with receipt.</li>
+      <li>Items must be unused, unwashed, in original condition.</li>
+      <li>Sale items are final sale.</li>
+    </ul>
+
+    <!-- Policy 2: Refunds -->
+    <h2>2. Refund Policy</h2>
+    <ul>
+      <li>Refunds issued to original payment within 5–7 business days.</li>
+      <li>Shipping charges are non-refundable unless item is defective.</li>
+    </ul>
+
+    <!-- Policy 3: Shipping -->
+    <h2>3. Shipping Policy</h2>
+    <ul>
+      <li>Orders processed in 1–3 business days.</li>
+      <li>Free shipping over $100.</li>
+      <li>Delivery within 3–7 business days.</li>
+    </ul>
+
+    <!-- Policy 4: Privacy -->
+    <h2>4. Privacy Policy</h2>
+    <ul>
+      <li>Your personal data is safe and not shared.</li>
+      <li>All transactions are encrypted and secure.</li>
+    </ul>
+
+    <!-- Policy 5: Payment Methods -->
+    <h2>5. Payment Methods</h2>
+    <ul>
+      <li>Visa, MasterCard, AmEx, PayPal accepted.</li>
+      <li>Cash on delivery available in select regions.</li>
+    </ul>
+
+    <!-- Policy 6: Customer Service -->
+    <h2>6. Customer Service</h2>
+    <ul>
+      <li>Available Mon–Fri, 9 AM to 6 PM.</li>
+      <li>Email: support@yourstore.com | Phone: +1 123-456-7890</li>
+    </ul>
+
+    <!-- Policy 7: Order Cancellation -->
+    <h2>7. Order Cancellation</h2>
+    <ul>
+      <li>Orders can be canceled within 12 hours of placement.</li>
+    </ul>
+
+    <!-- Policy 8: Damaged Items -->
+    <h2>8. Damaged or Defective Items</h2>
+    <ul>
+      <li>Report within 48 hours with photo evidence.</li>
+    </ul>
+
+    <!-- Policy 9: Product Availability -->
+    <h2>9. Product Availability</h2>
+    <ul>
+      <li>Subject to stock availability. You'll be notified if unavailable.</li>
+    </ul>
+
+    <!-- Policy 10: Code of Conduct -->
+    <h2>10. Code of Conduct</h2>
+    <ul>
+      <li>We reserve the right to refuse service for inappropriate behavior.</li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding and viewport settings for responsive design -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VW Clothing Store</title>
+  
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ========== HEADER SECTION ========== -->
+  <!-- Contains navigation bar with logo, menu links, search bar, and cart -->
+  <header>
+    <nav id="n1">
+      <!-- Store Logo -->
+      <div class="logo">
+        <img src="vw_logo.png" alt="Velvet Wear" style="height: 70px" />
+      </div>
+      
+      <!-- Navigation Links for filtering products by category -->
+      <ul class="nav-links">
+        <li><a href="#" class="category" data-category="all">All Products</a></li>
+        <li><a href="#" class="category" data-category="men">Men</a></li>
+        <li><a href="#" class="category" data-category="women">Women</a></li>
+        <li><a href="#" class="category" data-category="kids">Kids</a></li>
+        <li><a href="login.html" class="logout">Logout</a></li>
+      </ul>
+      
+      <!-- Search Bar - allows users to search for products by name -->
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search products..." />
+        <button onclick="searchProducts()">Search</button>
+      </div>
+      
+      <!-- Shopping Cart Icon - shows number of items in cart -->
+      <div class="cart-icon">
+        <button onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN CONTENT SECTION ========== -->
+  <main>
+    <section class="products">
+      <h2>Our Products</h2>
+      
+      <!-- Product Grid - This div will be filled with products using JavaScript -->
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+  </main>
+
+  <!-- ========== SHOPPING CART POPUP ========== -->
+  <!-- Hidden by default, appears when user clicks cart button -->
+  <div id="cart" class="cart-container" style="display: none;">
+    <h3>Your Cart</h3>
+    
+    <!-- List of items in cart - filled by JavaScript -->
+    <ul id="cartItems"></ul>
+    
+    <!-- Total price display -->
+    <p>Total: $<span id="cartTotal">0.00</span></p>
+    
+    <!-- Cart action buttons -->
+    <button onclick="clearCart()">Clear Cart</button>
+    <a href="payment.html">
+      <button onclick="goToPayment()">Proceed to Payment</button>
+    </a>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>&copy; ALL RIGHTS RESERVED 2025</footer>
+
+  <!-- Link to external JavaScript file - handles all functionality -->
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Velvet Wear</title>
+  
+  <style>
+    /* ========================================
+       BASIC RESET
+       ======================================== */
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    /* ========================================
+       PAGE LAYOUT
+       ======================================== */
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      padding: 0 10px;
+      position: relative;
+    }
+
+    /* Background image */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("Back.png") no-repeat center center fixed;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    /* ========================================
+       HEADER & NAVIGATION
+       ======================================== */
+    
+    header {
+      background-color: transparent;
+      padding: 10px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+      color: white;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00aaff;
+    }
+
+    /* ========================================
+       CONTACT INFORMATION CONTAINER
+       ======================================== */
+    
+    .wrapper {
+      margin-top: 120px; /* Space for fixed header */
+      width: 400px;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    /* ========================================
+       CONTACT INFO TEXT
+       ======================================== */
+    
+    .contact-info {
+      color: #fff;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    /* ========================================
+       SOCIAL MEDIA LINKS
+       ======================================== */
+    
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .social-links a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #00aaff;
+    }
+
+    /* ========================================
+       RESPONSIVE DESIGN (MOBILE)
+       ======================================== */
+    
+    @media (max-width: 768px) {
+      /* Stack navigation vertically on mobile */
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Make wrapper responsive */
+      .wrapper {
+        width: 90%;
+        padding: 20px;
+      }
+
+      /* Center social links on mobile */
+      .social-links {
+        align-items: center;
+        font-size: 16px;
+      }
+
+      .social-links a {
+        justify-content: center;
+        font-size: 16px;
+      }
+
+      /* Smaller logo on mobile */
+      .logo img {
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <header>
+    <nav>
+      <!-- Store logo -->
+      <div class="logo">
+        <img src="vw_logo.png" alt="Velvet Wear" style="height: 70px" />
+      </div>
+      
+      <!-- Navigation menu -->
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="store-policy.html">Store Policy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========================================
+       CONTACT INFORMATION
+       ======================================== -->
+  <div class="wrapper">
+    <h2>Contact Us</h2>
+    
+    <!-- Intro text -->
+    <p class="contact-info">Follow us on social media:</p>
+    
+    <!-- Social media links -->
+    <div class="social-links">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      
+      <!-- Facebook -->
+      <a href="https://www.facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      
+      <!-- Twitter/X -->
+      <a href="https://www.twitter.com" target="_blank">
+        <i class="fab fa-x-twitter"></i> X (Twitter)
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

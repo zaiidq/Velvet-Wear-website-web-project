@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment - Velvet Wear</title>
+  
+  <style>
+    /* ========================================
+       BASIC RESET
+       ======================================== */
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    /* ========================================
+       PAGE LAYOUT
+       ======================================== */
+    
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      padding: 20px;
+      position: relative;
+      background-color: #000; /* Fallback color */
+    }
+
+    /* Background image */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("Back.png"), #000;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    /* ========================================
+       PAYMENT FORM CONTAINER
+       ======================================== */
+    
+    .container {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+
+    /* ========================================
+       FORM ROWS & SECTIONS
+       ======================================== */
+    
+    .row {
+      margin-bottom: 20px;
+    }
+
+    /* ========================================
+       CUSTOM RADIO BUTTONS
+       ======================================== */
+    
+    /* Radio button label container */
+    .radio-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 10px;
+    }
+
+    /* Hide default radio button */
+    .row input[type="radio"] {
+      display: none;
+    }
+
+    /* Custom radio button circle */
+    .radio {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      position: relative;
+    }
+
+    /* Inner dot when selected */
+    .radio::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: transparent;
+      transition: 0.3s;
+    }
+
+    /* Show inner dot when radio is checked */
+    input[type="radio"]:checked + .radio::before {
+      background: #00aaff;
+    }
+
+    /* ========================================
+       PAYMENT METHOD IMAGES
+       ======================================== */
+    
+    .right img {
+      height: 24px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    /* ========================================
+       FORM INPUTS
+       ======================================== */
+    
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input,
+    select {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #aaa;
+      color: #fff;
+      padding: 8px;
+      margin-top: 5px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    /* Dropdown options styling */
+    select option {
+      background: #000;
+      color: #fff;
+    }
+
+    /* ========================================
+       CARD DETAILS LAYOUT
+       ======================================== */
+    
+    /* Two-column layout for expiry date and CVV */
+    .details {
+      display: flex;
+      gap: 15px;
+    }
+
+    .details .info {
+      flex: 1; /* Each column takes equal space */
+    }
+
+    /* ========================================
+       SUBMIT BUTTON
+       ======================================== */
+    
+    .button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button button {
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: 100%;
+    }
+
+    .button button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========================================
+       PAYMENT FORM
+       ======================================== -->
+  <div class="container">
+    <h2>Payment Information</h2>
+
+    <!-- ========================================
+         PAYMENT METHOD SELECTION
+         ======================================== -->
+    
+    <!-- PayPal Option -->
+    <div class="row">
+      <label class="radio-label">
+        <input type="radio" name="payment" />
+        <div class="radio"></div>
+        PayPal
+        <div class="right">
+          <img src="Pay.jpg" alt="paypal" />
+        </div>
+      </label>
+    </div>
+
+    <!-- Credit/Debit Card Option -->
+    <div class="row">
+      <label class="radio-label">
+        <input type="radio" name="payment" />
+        <div class="radio"></div>
+        Debit/Credit Card
+        <div class="right">
+          <img src="Visa_2021.svg.png" alt="visa" />
+          <img src="master.png" alt="mastercard" />
+          <img src="amex.png" alt="amex" />
+          <img src="maestro.png" alt="maestro" />
+        </div>
+      </label>
+    </div>
+
+    <!-- ========================================
+         CARD DETAILS FORM
+         ======================================== -->
+    
+    <!-- Cardholder Name -->
+    <div class="row">
+      <label for="cardholdername">Cardholder Name</label>
+      <input id="cardholdername" type="text" placeholder="e.g. Richard Bovell" />
+    </div>
+
+    <!-- Card Number -->
+    <div class="row">
+      <label for="cardnumber">Card Number</label>
+      <input id="cardnumber" type="text" maxlength="19" placeholder="8888-8888-8888-8888"/>
+    </div>
+
+    <!-- Expiry Date and CVV (side by side) -->
+    <div class="row details">
+      
+      <!-- Left column: Expiry Month and Year -->
+      <div class="info">
+        <label>Expiry Month</label>
+        <select>
+          <option>MM</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+
+        <label style="margin-top:10px;">Expiry Year</label>
+        <select>
+          <option>YYYY</option>
+          <option>2024</option>
+          <option>2025</option>
+          <option>2026</option>
+          <option>2027</option>
+          <option>2028</option>
+        </select>
+      </div>
+
+      <!-- Right column: CVV -->
+      <div class="info">
+        <label for="cvv">CVV</label>
+        <input id="cvv" type="text" maxlength="4" placeholder="123" />
+      </div>
+    </div>
+
+    <!-- ========================================
+         SUBMIT BUTTON
+         ======================================== -->
+    <div class="button">
+      <button type="submit">Confirm Payment</button>
+    </div>
+  </div>
+</body>
+</html>

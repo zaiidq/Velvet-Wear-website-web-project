@@ -1,0 +1,376 @@
+/* ============================================
+   VELVET WEAR CLOTHING STORE - MAIN STYLESHEET
+   ============================================
+   
+   This file contains all the styling for the website.
+   It controls colors, layouts, fonts, and responsiveness.
+   
+   Sections:
+   1. Basic Reset & Body Styling
+   2. Header & Navigation
+   3. Product Display
+   4. Shopping Cart
+   5. Admin Panel
+   6. Footer
+   7. Responsive Design (Mobile)
+   ============================================ */
+
+
+/* ==========================================
+   1. BASIC RESET & BODY STYLING
+   ========================================== */
+
+/* Reset default browser styles */
+body {
+  font-family: Arial, sans-serif; /* Simple, readable font */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+
+/* ==========================================
+   2. HEADER & NAVIGATION
+   ========================================== */
+
+/* Main header bar at the top */
+header {
+  background-color: aqua; /* Bright cyan color */
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Navigation container */
+nav {
+  display: flex; /* Modern layout method */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Vertical centering */
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Center the nav */
+  padding: 0 20px;
+}
+
+/* Logo styling */
+.logo img {
+  height: 70px; /* Fixed logo height */
+}
+
+/* Navigation links container */
+.nav-links {
+  list-style: none; /* Remove bullet points */
+  display: flex;
+  gap: 20px; /* Space between links */
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual navigation links */
+.nav-links li a {
+  color: white;
+  text-decoration: none; /* Remove underline */
+  font-size: 16px;
+  transition: color 0.3s; /* Smooth color change on hover */
+}
+
+/* Link hover effect */
+.nav-links li a:hover {
+  color: #00aaff; /* Light blue on hover */
+}
+
+/* Search bar container */
+.search-bar {
+  display: flex;
+  gap: 10px; /* Space between input and button */
+  margin-top: 10px;
+}
+
+/* Search input field */
+.search-bar input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Search button */
+.search-bar button {
+  padding: 8px 16px;
+  background-color: #00aaff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s;
+}
+
+/* Search button hover effect */
+.search-bar button:hover {
+  background-color: #0077cc; /* Darker blue on hover */
+}
+
+/* Cart icon button */
+.cart-icon button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+/* ==========================================
+   3. PRODUCT DISPLAY SECTION
+   ========================================== */
+
+/* Main content area */
+main {
+  max-width: 1200px;
+  margin: 20px auto; /* Center with vertical spacing */
+  padding: 0 20px;
+}
+
+/* Products section heading */
+.products h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Product grid layout */
+.product-grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  /* Create columns that are at least 250px wide, auto-adjust count */
+  gap: 20px; /* Space between product cards */
+}
+
+/* Individual product card */
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s; /* Smooth animation */
+}
+
+/* Product card hover effect - lifts up slightly */
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Product image */
+.product-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover; /* Crop image to fit nicely */
+  border-radius: 4px;
+}
+
+/* Product name */
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Product description */
+.product-card p {
+  color: #555; /* Dark gray text */
+  font-size: 14px;
+}
+
+/* Product price */
+.product-card .price {
+  color: #00aaff; /* Blue color for price */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* In-stock indicator */
+.product-card .stock {
+  color: #28a745; /* Green for in stock */
+}
+
+/* Out-of-stock indicator */
+.product-card .out-of-stock {
+  color: #dc3545; /* Red for out of stock */
+}
+
+
+/* ==========================================
+   4. SHOPPING CART STYLING
+   ========================================== */
+
+/* Cart container (popup) */
+.cart-container,
+#cart {
+  background: rgb(148, 161, 236); /* Light purple background */
+  border: 1px solid #ddd;
+  padding: 15px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Cart heading */
+.cart-container h3,
+#cart h3 {
+  margin-top: 0;
+}
+
+/* Cart items list */
+#cart ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+}
+
+/* Individual cart item */
+#cart li {
+  margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   5. ADMIN PANEL STYLING
+   ========================================== */
+
+/* Admin panel container */
+.admin-panel {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Admin panel form inputs */
+.admin-panel input, 
+.admin-panel select {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* Admin panel buttons */
+.admin-panel button {
+  margin-top: 10px;
+  background-color: #28a745; /* Green for save button */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Admin product list */
+.admin-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Admin product list items */
+.admin-panel li {
+  margin: 10px 0;
+}
+
+/* Space between admin buttons */
+.admin-panel button:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+/* ==========================================
+   6. ADDITIONAL BUTTONS
+   ========================================== */
+
+/* Logout button styling */
+.logout-button {
+  padding: 8px 16px;
+  background-color: #dc3545; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+/* Logout button hover effect */
+.logout-button:hover {
+  background-color: #b02a37; /* Darker red */
+}
+
+/* Payment button styling */
+.payment-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00aaff; /* Blue */
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+/* Payment button hover effect */
+.payment-button:hover {
+  background-color: #0077cc; /* Darker blue */
+}
+
+
+/* ==========================================
+   7. FOOTER
+   ========================================== */
+
+/* Footer at bottom of page */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: aqua; /* Match header color */
+  color: white;
+  margin-top: auto; /* Push to bottom */
+  width: 100%;
+}
+
+
+/* ==========================================
+   8. RESPONSIVE DESIGN (MOBILE)
+   ========================================== */
+
+/* Apply these styles only on screens smaller than 768px */
+@media (max-width: 768px) {
+  
+  /* Stack navigation vertically on mobile */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Stack navigation links vertically */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Make search bar full width on mobile */
+  .search-bar {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Search input takes 70% of width */
+  .search-bar input {
+    width: 70%;
+  }
+}
